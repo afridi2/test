@@ -8,7 +8,7 @@
 =end
 
 file_name = "editFile.txt"
-commits = 20 # number of commits
+commits = 9 # number of commits
 days = 3 # number of days to spread the commits over
 
 # You do not need to edit anything below this line if you would like
@@ -32,6 +32,6 @@ while commit_count < commits
   	f.puts "Adding Commit Number: #{commit_count}"
   end
   system ('git add .')
-  system ('git commit --date="Mon Feb 16 14:00 2015 +0100" -m "Added Commit #{commit_count}" ')
+  system ('git commit --date="Mon Feb 16 12:0#{commit_count} 2015 +0100" -m "Added Commit #{commit_count}" ')
   commit_count += 1
 end
