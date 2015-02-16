@@ -23,14 +23,15 @@ extra_commits = commits % days
 commit_count = 0
 day_count = 0
 
-open(file_name, 'w') do |f|
-  while commit_count < commits
+
+while commit_count < commits
+	open(file_name, 'w') do |f|
   	#output_time = time.strftime("%a %b %d")
   	output_time = time
-  	puts output_time
+  	#puts output_time
   	f.puts "Adding Commit Number: #{commit_count}"
-  	system ('git add .')
-  	system ('git commit --date="Wed Feb 16 14:00 2015 +0100" -m "Added Commit #{commit_count}" ')
-  	commit_count += 1
   end
+  system ('git add .')
+  system ('git commit --date="Mon Feb 16 14:00 2015 +0100" -m "Added Commit #{commit_count}" ')
+  commit_count += 1
 end
